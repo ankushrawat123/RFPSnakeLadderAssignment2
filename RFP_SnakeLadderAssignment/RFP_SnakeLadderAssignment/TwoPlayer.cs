@@ -8,13 +8,12 @@ namespace RFP_SnakeLadderAssignment
 {
     internal class TwoPlayer
     {
-        public static int num1, num2, num3, num4,num5,num6,optNum1, optNum2,diff1,diff2,diff3;
+        public static int num1, num2, num3, num4,num5,num6,optNum1, optNum2,diff3;
         public static int position1 = 0, position2 = 0;
         public static int dicecount1 = 0, dicecount2 = 0;
         public static void TwoPlayerMethod()
         {
             Console.WriteLine("\n\n Two player game Begins here....................................................................................\n");
-
 
             while (position1 < 100 && position2 < 100)
             {
@@ -42,14 +41,13 @@ namespace RFP_SnakeLadderAssignment
                 else if (optNum1 == 2)
                 {
                     position1 = position1 + num1;
+
                     if (position1 > 100)
                     {
-
                         position1 = position1 - num1;
-
                     }
 
-                        Console.WriteLine("Player1 got Ladder Option \n Player1 Dice value: {0} \n player1 position : {1}", num1, position1);
+                    Console.WriteLine("Player1 got Ladder Option \n Player1 Dice value: {0} \n player1 position : {1}", num1, position1);
                     Console.WriteLine("Playing again since Player1 got ladder ");
                     //Again rolling dice since got ladder
                     Random obj3 = new Random();
@@ -58,21 +56,15 @@ namespace RFP_SnakeLadderAssignment
                     Console.WriteLine("Player1 second chance Dice value: {0} ", num3);
                     dicecount1++;
                     dicecount1++;
+
                     if (position1 > 100)
                     {
-
-                        position1 = position1 - num3 ;
-                        diff1 = 100 - position1;
-
-                        Console.WriteLine("Player1 got Ladder \n Player1 Dice value: {0} ", num3);
-                      
-                        
-                    }
-
-                    
+                        position1 = position1 - num3 ;                    
+                        Console.WriteLine("Player1 got Ladder \n Player1 Dice value: {0} ", num3);                    
+                    }   
                     Console.WriteLine(" Player1 position: {0}\n", position1);
-
                 }
+
                 else
                 {
                     dicecount1++;
@@ -86,10 +78,8 @@ namespace RFP_SnakeLadderAssignment
                     Console.WriteLine("Player1 Dice value: {0}\n", num1);
                 }
 
-
-
-
-                // Programing for player 2.....................................................
+                // Programing for player 2...................................................................
+                
                 if (optNum2 == 1)  //optNum1=1 ----no play ,,,,, optNum1=2 ----ladder,,,,optNum1=3 ----snake
                 {
                     dicecount2++;    //  dicecount = dicecount+1;
@@ -100,17 +90,10 @@ namespace RFP_SnakeLadderAssignment
                     dicecount2++;
                     position2 = position2 + num2;
 
-
-                    
                     if (position2 > 100)
                     {
-
                         position2 = position2 - num2;
-
                     }
-
-
-
 
                     Console.WriteLine("Player2 got Ladder Option \n Player2 Dice value: {0} \n player2 position : {1} ", num2, position2);
                     Console.WriteLine("Playing again since Player2  got ladder ");
@@ -122,19 +105,8 @@ namespace RFP_SnakeLadderAssignment
 
                     if (position2 > 100)
                     {
-
                         position2 = position2- num4;
-                        diff2 = 100 - position2;
-
-                        
-
-                        
-
-
-
-                        Console.WriteLine("Player2 got Ladder \n Player2 Dice value: {0} ", num2);
-                    
-                        
+                        Console.WriteLine("Player2 got Ladder \n Player2 Dice value: {0} ", num2);                   
                     }
                     Console.WriteLine(" Player2 position: {0}\n", position2);
                 }
@@ -151,8 +123,7 @@ namespace RFP_SnakeLadderAssignment
                     Console.WriteLine(" Player2 position: {0} \n ", position2);
                 }
             }
-            
-            
+                       
             if (position1>position2)
             {
                 diff3 = position1 - position2;
