@@ -2,4 +2,4 @@
 using RFP_SnakeLadderAssignment;
 Console.WriteLine("Welcome to Snake and Ladder Program");
 SinglePlayer.SinglePlayermethod();
-  
+  TwoPlayer.TwoPlayerMethod();
