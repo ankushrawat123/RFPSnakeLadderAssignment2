@@ -8,7 +8,7 @@ namespace RFP_SnakeLadderAssignment
 {
     internal class TwoPlayer
     {
-        public static int num1, num2, num3, num4,num5,num6,optNum1, optNum2,diff3;
+        public static int num1, num2, num3, num4,optNum1, optNum2,diff3;
         public static int position1 = 0, position2 = 0;
         public static int dicecount1 = 0, dicecount2 = 0;
         public static void TwoPlayerMethod()
