@@ -17,7 +17,7 @@ namespace RFP_SnakeLadderAssignment
         {
             Console.WriteLine("\n Uc1 Begins here......................................................\n");
             Console.WriteLine(" Single player Snake Ladder Game ");
-            while (position <= 100)
+            while (position < 100)
             {
                 //value for dice
                 Random obj1 = new Random();
@@ -43,10 +43,10 @@ namespace RFP_SnakeLadderAssignment
                     if (position > 100)
                     {
                         dicecount++;
-                        position = 100;
+                        position = position-num1;
                         Console.WriteLine("You got Ladder  \n Dice value: {0} \n",num1);
                       
-                        break;
+                        
                     }
                         
                         Console.WriteLine(" your position: {0}", position);
